@@ -66,6 +66,22 @@ python CLI_inference.py \
 
 ---
 
+## 💡 What Worked
+- Rebalanced dataset and removed unrelated “only glove” class → improved mAP & recall
+- Training directly from Google Drive ensured model weights were not lost between Colab sessions
+- Label mapping in inference standardized JSON output as gloved_hand / bare_hand
+- Smaller YOLOv8n model gave faster inference with decent accuracy
+
+## ⚠️ What Didn’t Work (and Fixes)
+
+| Issue | Cause | Fix |
+|-------|--------|-----|
+| `data.yaml` not found / invalid path | Double nesting after Roboflow export | Adjusted to relative paths (`../train/images`, etc.) |
+| Validation set had only one class | Random imbalance from Roboflow | Rebalanced splits manually |
+| GitHub upload errors (large weights) | `.pt` files > 100 MB | Added `.gitignore` to exclude weights and temporary outputs |
+
+---
+
 ## 🧩 Output Format
 
 Each inference produces:
