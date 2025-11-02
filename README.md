@@ -70,9 +70,9 @@ python CLI_inference.py \
 - **Source:** [Roboflow Dataset ↗](https://app.roboflow.com/glove-detection-3vldq/glove-hand-and-bare-hand-zwvif/1)  
 - **Classes:** `glove_hand`, `bare_hand`  
 - **Split:**  
-  - Train → 89%  
-  - Validation → 7%  
-  - Test → 4%  
+  - Train → 79%  
+  - Validation → 13%  
+  - Test → 8%  
 - **Format:** YOLOv8 (images + labels + `data.yaml`)  
 
 ---
@@ -129,12 +129,12 @@ python CLI_inference.py -i "path/to/test_images/" -o "path/to/output/"
 
 | Metric | Value |
 |--------|--------|
-| mAP@0.5 | **0.87** |
-| Precision | **0.91** |
-| Recall | **0.85** |
+| mAP@0.5 | **0.96** |
+| Precision | **0.97** |
+| Recall | **0.93** |
 | Inference Speed | ~25 FPS (GPU) |
 
-> Results measured using YOLOv8 validation on test split (2% of total data).
+> Results measured using YOLOv8 validation on test split (8% of total data).
 
 ---
 
