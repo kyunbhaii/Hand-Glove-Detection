@@ -34,8 +34,6 @@ Install dependencies (Python ≥ 3.11 recommended):
 pip install ultralytics opencv-python-headless torch torchvision torchaudio
 ```
 
----
-
 ### 2️⃣ Command Example
 
 Run inference directly from the terminal:
@@ -91,8 +89,6 @@ To make the model more **robust** and capable of handling diverse lighting condi
 - Random erasing and mosaic augmentations  
 
 > These augmentations improve generalization, ensuring the model performs well on unseen real-world data.
-
----
 
 ### Batch Inference & Multiprocessing  
 The **CLI script (`CLI_inference.py`)** supports **batch inference**, allowing efficient detection on multiple images simultaneously.
