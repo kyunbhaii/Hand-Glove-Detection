@@ -11,7 +11,7 @@ parser.add_argument('-c', '--confidence', type=float, default=0.25, help="Confid
 args = parser.parse_args()
 
 run_inference_spec(
-    weights="runs/glove_vs_bare_yolov8n/weights/best.pt",  # ✅ correct for your Drive folder
+    weights="runs/glove_vs_bare_yolov8n/weights/best.pt",
     source=args.input,
     out_dir=args.output,
     logs_dir=args.logs,
