@@ -89,9 +89,3 @@ Each inference produces:
 - Trained weights (`best.pt`) are located in `runs/glove_vs_bare_yolov8n/weights/`.  
 - Works seamlessly with YOLOv8 for both local and Colab environments.  
 - You can retrain or fine-tune using `Glove_Detection.ipynb`.
-
----
-
-**Author:** Vikrmaditya Mishra  
-**Version:** 1.0  
-**License:** CC BY 4.0 (Dataset)
