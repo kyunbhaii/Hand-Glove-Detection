@@ -62,7 +62,20 @@ python CLI_inference.py \
 - **Model:** YOLOv8n (fine-tuned on glove vs bare hand dataset)  
 - **Classes:** `glove_hand`, `bare_hand`  
 - **Framework:** Ultralytics YOLOv8  
-- **Dataset:** Exported from Roboflow, annotated for binary classification of hand states  
+- **Dataset:** Exported from Roboflow, annotated for binary classification of hand states
+
+---
+
+## 📊 Dataset Details
+
+- **Dataset name:** Glove-Hand-and-Bare-Hand  
+- **Source:** [Roboflow Dataset ↗](https://app.roboflow.com/glove-detection-3vldq/glove-hand-and-bare-hand-zwvif/1)  
+- **Classes:** `glove_hand`, `bare_hand` 
+- **Split:**  
+  - Train → 82%  
+  - Validation → 16%  
+  - Test → 2%  
+- **Format:** YOLOv8 (images + labels + `data.yaml`) 
 
 ---
 
@@ -76,9 +89,9 @@ python CLI_inference.py \
 
 | Issue | Cause | Fix |
 |-------|--------|-----|
-| `data.yaml` not found / invalid path | Double nesting after Roboflow export | Adjusted to relative paths (`../train/images`, etc.) |
-| Validation set had only one class | Random imbalance from Roboflow | Rebalanced splits manually |
-| GitHub upload errors (large weights) | `.pt` files > 100 MB | Added `.gitignore` to exclude weights and temporary outputs |
+| Dataset not loading | Folder paths were wrong after download | Fixed file paths in `data.yaml` - Adjusted to relative paths (`../train/images`, etc.) |
+| Only glove images in validation | Random split created imbalance | Rebalanced dataset in Roboflow |
+| Inference was slow on CPU | YOLOv8 defaulted to CPU mode | Switched to GPU runtime for faster processing |
 
 ---
 
