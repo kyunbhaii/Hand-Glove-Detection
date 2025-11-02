@@ -75,7 +75,29 @@ python CLI_inference.py \
   - Train → 82%  
   - Validation → 16%  
   - Test → 2%  
-- **Format:** YOLOv8 (images + labels + `data.yaml`) 
+- **Format:** YOLOv8 (images + labels + `data.yaml`)
+
+---
+
+## ⚙️ Advanced Features
+
+### 🧩 Image Augmentation  
+To make the model more **robust** and capable of handling diverse lighting conditions and hand poses, multiple image augmentations were applied during YOLOv8 training.
+
+**Augmentations used:**
+- Random horizontal flip (`fliplr=0.5`)  
+- Hue-Saturation-Value adjustment (`hsv_h=0.015, hsv_s=0.7, hsv_v=0.4`)  
+- Random scaling and translation (`scale=0.5`, `translate=0.1`)  
+- Random erasing and mosaic augmentations  
+
+> These augmentations improve generalization, ensuring the model performs well on unseen real-world data.
+
+### ⚡ Batch Inference & Multiprocessing  
+The **CLI script (`CLI_inference.py`)** supports **batch inference**, allowing efficient detection on multiple images simultaneously.
+
+When a folder is passed as input, YOLOv8 automatically loads and processes all images in batches:
+```bash
+python CLI_inference.py -i "path/to/test_images/" -o "path/to/output/"
 
 ---
 
