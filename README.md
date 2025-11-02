@@ -7,8 +7,6 @@ This project detects **gloved** and **bare hands** in images using a custom-trai
 ## 📁 Folder Structure
 
 ```
-Part_1_Glove_Detection/
-│
 ├── Glove_Detection.ipynb     # Jupyter notebook for training, validation, and testing
 ├── CLI_inference.py           # Command-line script for running inference
 │
