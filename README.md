@@ -7,20 +7,20 @@ This project detects **gloved** and **bare hands** in images using a custom-trai
 ## 📁 Folder Structure
 
 ```
-├── Glove_Detection.ipynb     # Jupyter notebook for training, validation, and testing
-├── CLI_inference.py           # Command-line script for running inference
+├── Glove_Detection.ipynb
+├── CLI_inference.py
 │
-├── runs/                      # YOLOv8 auto-generated training outputs
+├── runs/
 │   └── glove_vs_bare_yolov8n/
 │       └── weights/
-│           ├── best.pt        # Best performing model checkpoint
-│           └── last.pt        # Last saved checkpoint
+│           ├── best.pt
+│           └── last.pt
 │
-├── output/                    # Annotated images generated during inference
+├── output/
 │
-├── logs/                      # Per-image JSON logs (filename, detections, bbox, confidence)
+├── logs/
 │
-└── README.md                  # Project documentation (this file)
+└── README.md
 ```
 
 ---
