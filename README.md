@@ -72,9 +72,9 @@ python CLI_inference.py \
 - **Source:** [Roboflow Dataset ↗](https://app.roboflow.com/glove-detection-3vldq/glove-hand-and-bare-hand-zwvif/1)  
 - **Classes:** `glove_hand`, `bare_hand`  
 - **Split:**  
-  - Train → 82%  
-  - Validation → 16%  
-  - Test → 2%  
+  - Train → 89%  
+  - Validation → 7%  
+  - Test → 4%  
 - **Format:** YOLOv8 (images + labels + `data.yaml`)  
 
 ---
