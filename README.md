@@ -8,6 +8,7 @@ This project detects **gloved** and **bare hands** in images using a custom-trai
 
 ```
 ├── Glove_Detection.ipynb
+│
 ├── CLI_inference.py
 │
 ├── runs/
